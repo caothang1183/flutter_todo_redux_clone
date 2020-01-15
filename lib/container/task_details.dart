@@ -4,7 +4,7 @@ import 'package:flutter_todo_redux_clone/models/app_state.dart';
 import 'package:flutter_todo_redux_clone/models/task.dart';
 import 'package:flutter_todo_redux_clone/presentation/detail_screen.dart';
 import 'package:flutter_todo_redux_clone/redux/actions/task_action.dart';
-import 'package:flutter_todo_redux_clone/utils/optional.dart';
+import 'package:flutter_todo_redux_clone/utils/selector.dart';
 import 'package:redux/redux.dart';
 
 class TaskDetails extends StatelessWidget {
@@ -54,15 +54,5 @@ class _ViewModel {
                 ));
             },
         );
-    }
-}
-
-List<Task> tasksSelector(AppState state) => state.tasks;
-
-Optional<Task> taskSelector(List<Task> tasks, String id) {
-    try {
-        return Optional.of(tasks.firstWhere((task) => task.id == id));
-    } catch (e) {
-        return Optional.absent();
     }
 }

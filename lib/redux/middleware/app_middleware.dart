@@ -1,10 +1,10 @@
-import 'package:flutter_todo_redux_clone/container/task_details.dart';
 import 'package:flutter_todo_redux_clone/models/app_state.dart';
 import 'package:flutter_todo_redux_clone/models/task.dart';
 import 'package:flutter_todo_redux_clone/network/file_storage.dart';
 import 'package:flutter_todo_redux_clone/redux/actions/task_action.dart';
 import 'package:flutter_todo_redux_clone/repositories/tasks_repository.dart';
 import 'package:flutter_todo_redux_clone/repositories/tasks_repository_flutter.dart';
+import 'package:flutter_todo_redux_clone/utils/selector.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:redux/redux.dart';
 
